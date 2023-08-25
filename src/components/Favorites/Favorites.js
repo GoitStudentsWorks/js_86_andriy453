@@ -301,39 +301,39 @@ if( JSON.parse(localStorage.getItem(KEY_FAVORITE)) !== null){
  }
  const gallery = document.querySelector('.gallery');
 
- if(gallery){
-  gallery.addEventListener('click', seeRecipe);
- }
+ // if(gallery){
+ //  gallery.addEventListener('click', seeRecipe);
+ // }
 
  const backdropEl = document.querySelector('.backdrop-see');
  const modalEl = document.querySelector('.modal_see');
-function seeRecipe(evt) {
-  if (evt.target.tagName !== 'BUTTON') {
-    return;
-  }
+// function seeRecipe(evt) {
+//   if (evt.target.tagName !== 'BUTTON') {
+//     return;
+//   }
 
-  if (evt.target.innerText === 'See recipe') {
-    let id = evt.target.id;
+//   if (evt.target.innerText === 'See recipe') {
+//     let id = evt.target.id;
 
-    fetchRecipe(id).then(obj => {
-      const favoriteBtn = document.querySelector('.js-favorite');
-      favoriteBtn.textContent = 'Remove from favorites';
-      modalEl.innerHTML = renderRecipe(obj);
-      const closeModalBtn = document.querySelector('.close-modal');
-      backdropEl.classList.remove('is-hidden');
-      document.body.classList.add('no-scroll');
-      closeModalBtn.addEventListener('click', closeModal);
-      document.addEventListener('keydown', closoOnBackdrop);
-      const RatingeBtn = document.querySelector('.js-rating');
+//     fetchRecipe(id).then(obj => {
+//       const favoriteBtn = document.querySelector('.js-favorite');
+//       favoriteBtn.textContent = 'Remove from favorites';
+//       modalEl.innerHTML = renderRecipe(obj);
+//       const closeModalBtn = document.querySelector('.close-modal');
+//       backdropEl.classList.remove('is-hidden');
+//       document.body.classList.add('no-scroll');
+//       closeModalBtn.addEventListener('click', closeModal);
+//       document.addEventListener('keydown', closoOnBackdrop);
+//       const RatingeBtn = document.querySelector('.js-rating');
 
 
-      if (JSON.parse(localStorage.getItem('favorite') &&JSON.parse(localStorage.getItem('favorite')).includes(id))) {
+//       if (JSON.parse(localStorage.getItem('favorite') && JSON.parse(localStorage.getItem('favorite')).includes(id))) {
  
-      }
-      favoriteBtn.addEventListener('click', addFavorite);
-      createGalleryCard( JSON.parse(localStorage.getItem('favorite')), listFav);
-      modalRatingOpCl(RatingeBtn);
-    });
+//       }
+//       favoriteBtn.addEventListener('click', addFavorite);
+//       createGalleryCard( JSON.parse(localStorage.getItem('favorite')), listFav);
+//       modalRatingOpCl(RatingeBtn);
+//     });
   }
 }
 
