@@ -332,7 +332,7 @@ function seeRecipe(evt) {
       }
       favoriteBtn.addEventListener('click', addFavorite);
       createGalleryCard( JSON.parse(localStorage.getItem('favorite')), listFav);
-      // modalRatingOpCl(RatingeBtn);
+      modalRatingOpCl(RatingeBtn);
     });
   }
 }
