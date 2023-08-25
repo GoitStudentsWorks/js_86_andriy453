@@ -293,20 +293,20 @@ if (window.screen.width >= 768) {
 
 
 document.querySelector('.scrollable-list-fav').style.display = 'none';
-if( JSON.parse(localStorage.getItem(KEY_FAVORITE)) !== null){
-  document.querySelector('.scrollable-list-fav').style.display ='block';
- }
-  if ( favoritesRecipes === undefined) {
-   console.log( JSON.parse(localStorage.getItem(KEY_FAVORITE)))
- }
- const gallery = document.querySelector('.gallery');
+// if( JSON.parse(localStorage.getItem(KEY_FAVORITE)) !== null){
+//   document.querySelector('.scrollable-list-fav').style.display ='block';
+//  }
+//   if ( favoritesRecipes === undefined) {
+//    console.log( JSON.parse(localStorage.getItem(KEY_FAVORITE)))
+//  }
+//  const gallery = document.querySelector('.gallery');
 
  // if(gallery){
  //  gallery.addEventListener('click', seeRecipe);
  // }
 
- const backdropEl = document.querySelector('.backdrop-see');
- const modalEl = document.querySelector('.modal_see');
+ // const backdropEl = document.querySelector('.backdrop-see');
+ // const modalEl = document.querySelector('.modal_see');
 // function seeRecipe(evt) {
 //   if (evt.target.tagName !== 'BUTTON') {
 //     return;
@@ -334,8 +334,8 @@ if( JSON.parse(localStorage.getItem(KEY_FAVORITE)) !== null){
 //       createGalleryCard( JSON.parse(localStorage.getItem('favorite')), listFav);
 //       modalRatingOpCl(RatingeBtn);
 //     });
-  }
-}
+//   }
+// }
 
 
 
